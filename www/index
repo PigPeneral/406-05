@@ -1,9 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
 <head>
-    <title>The index</title>
+    <meta charset="UTF-8">
+    <title>the title</title>
 </head>
 <body>
-    <h>test</h>
-    <h1>123</h1>
+<h1>test1</h1>
 </body>
 </html>
