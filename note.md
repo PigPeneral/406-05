@@ -53,7 +53,7 @@
 
 #### To: .ssh
 
-```
+```ssh
 #****-********
 Host ********
 Hostname ****.****
@@ -63,4 +63,3 @@ Port 22
 User ******
 ForwardX11 yes
 ```
-
