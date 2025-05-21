@@ -9,7 +9,7 @@
 ### ip note
 
 check ip
-local: 192.168.x.x
+private ip: 192.168.x.x
 
 ### config #1
 
