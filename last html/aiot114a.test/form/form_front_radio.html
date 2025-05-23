@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- UI呈現(單選) -->
+    <form action="" method="get">
+        <h1>radio輸入</h1>
+        <p>名字: <input type="text" name="user" size="5"></p>
+        <p>電話: <input type="text" name="address" size="5"></p>
+        <p>種族:<br>
+            <input type="radio" name="race" value="Homo">智人
+            <input type="radio" name="race" value="Cane">狗狗
+            <input type="radio" name="race" value="Pica">喜鵲
+        </p>
+        <p>認同: <br>
+            <input type="radio" name="Gender" value="Fe">鐵 <br>
+            <input type="radio" name="Gender" value="HC">直升機
+        </p>
+        <p>
+            <input type="submit" value="送出">
+            <input type="reset" value="重置">
+        </p>
+    </form>
+    <br>
+    <!--textarea-->
+    <form action="" method="get">
+        <h1>其他寫法</h1>
+
+        <label for="name">
+            <p>名字: <input type="text" name="user" size="5" autofocus id="name"></p>
+        </label>
+
+        <label for="tel">
+            <p>電話: <input type="tel" name="phone_num" placeholder="+xxx xx-xxx-xxx-xx" autofocus id="tel"></p> <!--內容檢查和提示-->
+        </label>
+
+        <p>信箱: <input type="email" name="mail" placeholder="@" ></p> <!--內容檢查和提示-->
+        <p>網址: <input type="url" name="Adr" value="https://"></p> 
+        <p>年齡: <input type="text" name="address" size="5"></p>
+        <p>申論空間: <br>
+            <textarea name="statement" rows="6" cols="60"></textarea> 
+            <!--textarea 的 id只有在用到dome時才有用-->
+        </p>
+        <p>
+            <input type="submit" value="送出">
+            <input type="reset" value="重置">
+        </p>
+        <a href="/form/form_front_meter.html" title="yet another practise" style="font-size: x-large;">meter</a>
+        <a href="/try.html" title="back to try.html" style="font-size:x-large;">retry</a>
+    </form>
+</body>
+</html>

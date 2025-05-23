@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    .mar-table{margin-right:auto ;
+    margin-left:auto ; border:0;
+     border-collapse: collapse;
+    }
+    </style>
 </head>
 <body>
 <!--
@@ -119,4 +124,121 @@
 
 <h2>image faker:</h2>
 <img src="http://fakeimg.pl/300x300/#00F?text=123&font=lobster" alt="placeholder">
+<hr>
+<!--上標字 superscript-->
+<h1>sup and sub:</h1>
+X<sup>2</sup> + Y<sup>2</sup> = Z<sup>2</sup><br>
+<!--下標字 subscript-->
+H<sub>2</sub>O<br>
+
+<hr>
+<!-- auto generated ablow-->
+<h1>font:</h1>
+<!-- b 粗體字-->
+<b>粗體字bold</b><br>
+<!-- i 斜體字-->
+<i>斜體字italic</i><br>
+<!-- big -->
+<big>大字big(指令是紅的)</big> <sub> <a title="W3Schools: <big> was used in HTML 4">Why?</a> </sub> <br>
+<!-- small -->
+<small>小字small</small><br>
+<!-- strong -->
+<strong>粗強調字strong</strong><br>
+<!-- del -->
+<del>刪除線deleted</del><br>
+<!-- ins -->
+<ins>底線inserted</ins> <sub> <a href="https://stackoverflow.com/questions/12148517/whats-the-difference-between-the-u-tag-and-the-ins-tag" title="Stock overflow說法">差在哪?</a> </sub> <br>
+<!-- u -->
+<u>下劃線underline</u><br>
+<!-- mark -->
+<mark>標記字(螢光)highlight</mark><br>
+<!-- em -->
+<em>斜強調emphasized</em><br>
+<!-- s -->
+<s>刪除線strikethrough(早期寫法)</s><br>
+<!-- auto generated above-->
+<hr>
+<!--表格邏輯-->
+<h1>table:</h1>
+<!-- 直 行/欄(col) 橫 列(row) 但是挺容易混淆的，而且兩岸的理解好像剛好是反過來的
+    然後 下面這個自動產生的talbe，他的border是紅的-->
+<table border="1" style="border-collapse: collapse;">
+    <tr> <!-- tr: table row -->
+        <th>表頭</th> <!-- th: table header -->
+        <th>表頭</th>
+    </tr>
+    <tr>
+        <td>表格</td> <!-- td: table data -->
+        <td>表格</td>
+    </tr>
+    <tr>
+        <td>表格</td>
+    </tr>
+</table>
+
+<h2>try(以前的寫法?):</h2>
+<table border="1">
+    <tr>
+        <td>head</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr align="center">
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>td*</td>
+        <td>2</td>
+    </tr>
+</table>
+<br>
+<h2>現在的寫法?</h2>
+<table border="1">
+    <thead>
+        <th>T head</th>
+        <th>語意</th>
+        <th>標籤</th>
+    </thead>
+    <tbody>
+        <tr>
+        <td>tbody</td>
+        <td>語意</td>
+        <td>標籤</td>
+        </tr>
+        <tr>
+        <td>still</td>
+        <td>in</td>
+        <td>tbody</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <td>tfoot</td>
+        <td>語意</td>
+        <td>標籤</td>
+    </tfoot>
+</table>
+<br>
+<!--試著將表格排版置中，找到了align據說已經被棄用了-->
+<div id="talbeimg">
+    <table border="1" class="mar-table">
+        <tr>
+            <td>
+                <img src="/img/trytable.png" alt="painter" width="500" height="380">
+            </td>        
+        </tr>
+        <tr>
+            <td align="center">
+                <p>很醜的圖片筆記</p>
+            </td>
+        </tr>
+    </table>
+</div>
+<!--課程中老師推薦我們安裝github copilot，我剛剛花了一點時間把自動程式關掉了，不然每次想自己打東西都彈出一堆程式碼建議出來，畫面蠻亂的-->
+<hr>
+<h1>數據(還有一些概念) form:</h1>
+<div style="text-align: center;">
+    <a href="/form/form_front.html" title="to test" style="font-size: x-large; font-family:fantasy;">to form</a>
+</div>
 </html>
