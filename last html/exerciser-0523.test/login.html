@@ -1,33 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+        <style>
+        nav.toptext{
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            letter-spacing: 1px;
+            background-color: #e0f1f0;
+            padding: 20px;
+            margin-bottom: 10px;
+            gap: 20px;
+            box-shadow: 8px 8px 12px -6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
-<body>
-    <div id="Frame">
-        <div id="Top Frame" class="topframe">
-            <img src="/img/ROC_Workforce_Development_Agency_Emblem.png" alt="LOGO" width="200" height="200" class="logo">
-            <table>
-                <tr><a href="index.html" title="首頁">首頁</a></tr>
-                &nbsp;
-                <tr><a href="bio.html" title="自我介紹">自我介紹</a></tr>
-                &nbsp;
-                <tr><a href="contact.html" tilte="聯絡我">聯絡我</a></tr>
-                &nbsp;
-                <tr><a href="login.html" title="登入">登入</a></tr>
-            </table>
-        </div>
-    </div>
-    <div style="margin-left: 20px; margin-top: 20px;">
+<body style="background-color: rgb(235, 218, 227);">
+    <nav class="toptext">
+        <img src="/img/ROC_Workforce_Development_Agency_Emblem.png" alt="LOGO" width="200" height="200" class="logo">
+        <a href="exerciser-0523.test.html" title="首頁">首頁</a>
+        <a href="bio.html" title="自我介紹">自我介紹</a>
+        <a href="contact.html" title="聯絡我">聯絡我</a>
+        <a href="login.html" title="登入">登入</a>
+    </nav>
+    <hr>
+    <!--main-->
+    <div style="margin: 10px auto 0 15px; padding: 5px; border: 1px;">
         <form action="login.php" method="post">
+            <h2><a title="admin // 0000">登入<sub>&nbsp;(Guest, 1234)</sub></a></h2>
             <label for="userid">
                 <p>帳號：<input type="username" name="username" placeholder="帳號名稱" id="userid" autofocus></p>
             </label>
             <label for="pswid">
             <p>密碼：<input type="password" name="password" placeholder="密碼" id="pswid" autofocus></p>
             </label>
+            <p style="margin-left: 50px;">
+                <input type="submit" value="登入">
+                &nbsp;&nbsp;
+                <input type="reset" value="重設">
         </form>
     </div>
 </body>
