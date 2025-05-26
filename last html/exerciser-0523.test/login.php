@@ -9,7 +9,6 @@ if ($username === "admin" && $password === "0000") {
 } else {
     echo "<h1>登入失敗，請檢查您的帳號或密碼。</h1>";
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -24,10 +23,10 @@ if ($username === "admin" && $password === "0000") {
     網頁跳轉中，請稍後...
     <script>
         setTimeout(function() {
-            window.location.href = "exerciser-0523.test.html";
+            window.location.href = "index.php";
         }, 10000); // 10秒後跳轉
     </script>
-    <p>如果沒有自動跳轉，請點擊<a href="exerciser-0523.test.html">這裡</a>。</p>
+    <p>如果沒有自動跳轉，請點擊<a href="index.php">這裡</a>。</p>
     </div>
 </body>
 </html>

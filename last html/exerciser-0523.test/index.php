@@ -39,7 +39,6 @@
         <a href="exerciser-0523.test.html" title="首頁">首頁</a>
         <a href="bio.html" title="自我介紹">自我介紹</a>
         <a href="contact.html" title="聯絡我">聯絡我</a>
-        <a href="login.html" title="登入">登入</a>
     </nav>
     <hr>
     <!--side-->
@@ -49,7 +48,6 @@
                 <li><a href="exerciser-0523.test.html" title="首頁">首頁</a> </li>
                 <li><a href="bio.html" title="自我介紹">自我介紹</a> </li>
                 <li><a href="contact.html" title="聯絡我">聯絡我</a> </li>
-                <li><a href="login.html" title="登入">登入</a> </li>
             </ul>
         </nav>
     </aside>
