@@ -1,38 +1,75 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
+    <!--meta-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono&effect=emboss&subset=latin-ext">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=LXGW+WenKai+TC&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">    <!--title-->
     <title>首頁</title>
+    <!--style-->
     <style>
+        body {
+            background: #EBDAE3;
+            background: linear-gradient(90deg, rgba(235, 218, 227, 1) 0%, rgba(122, 29, 253, 0.45) 50%, rgba(252, 69, 197, 0.58) 100%);
+        }
         nav.toptext{
             display: flex;
             justify-content: left;
             align-items: center;
             letter-spacing: 1px;
+            font-family: 'LXGW WenKai TC', 'Noto Sans JP', sans-serif;
+            font-size:x-large;
             background-color: #e0f1f0;
             padding: 20px;
-            margin-bottom: 10px;
+            margin-bottom: 13px;
             gap: 20px;
             box-shadow: 8px 8px 12px -6px rgba(0, 0, 0, 0.1);
         }
-        nav.sidetext {
-            display: inline-flex;
+        nav.side {
+            display: block;
+            font-family: 'LXGW WenKai TC', 'Noto Sans JP', sans-serif;
+            font-size: large;
             flex-direction: row;
-            width: 104px;
+            position: absolute;
+            width: 124px;
             align-items: left;
             background-color: #e0f1f0;
             padding: 20px 20px 20px 0;
             box-shadow: 5px 5px 10px -6px rgba(0, 0, 0, 0.1);
         }
+        div.headline {
+            display: inline-flex;
+            flex-flow: column;
+            width: calc(100% - 193px);
+            margin-left: 157px;
+            padding: 18px;
+            background-color: #f9f9f9;
+            box-shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.1);
+        }
         div.main {
             display: inline-flex;
-            width: 60vw;
-            height: 100vh;
+            flex-flow: column;
+            width: calc(100% - 193px);
+            margin-top: 10px;
+            margin-left: 157px;
+            padding: 18px;
+            background-color: #f9f9f9;
+            box-shadow: 5px 5px 5px -3px rgba(0, 0, 0, 0.1);
+        }
+        .JetBrains-Mono {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 16px;
+            line-height: 1.5;
         }
     </style>
+
 </head>
-<body style="background-color: rgb(235, 218, 227);">
+
+<body>
     <!--nav-->
     <nav class="toptext">
         <img src="/img/ROC_Workforce_Development_Agency_Emblem.png" alt="LOGO" width="200" height="200">
@@ -41,10 +78,9 @@
         <a href="contact.html" title="聯絡我">聯絡我</a>
         <a href="login.html" title="登入">登入</a>
     </nav>
-    <hr>
     <!--side-->
     <aside>
-        <nav class="sidetext">
+        <nav class="side">
             <ul>
                 <li><a href="exerciser-0523.test.html" title="首頁">首頁</a> </li>
                 <li><a href="bio.html" title="自我介紹">自我介紹</a> </li>
@@ -56,13 +92,33 @@
     <!--end of side; content-->
     <!--main-->
     <main>
-        <div class="main">
-            <span>
-                <h1>Index！</h1>
-                <p>Lorem!</p>
-                <p>假文!</p>
-            </span>
+        <div id="article" class="headline">
+            <h1 class="font-effect-emboss" style="color:grey;">目前參考過的網頁：</h1>
+            <ul style="font-family: 'JetBrains Mono', monospace; font-size: 16px; line-height: 1.5;">
+                <li><a href="https://www.ptt.cc/index.bbs.html" target="_blank" title="ptt">ptt.cc/index.bbs.html</a></li>
+                <li><a href="https://developers.google.com/fonts/docs/getting_started?hl=zh-tw" target="_blank" title="Google fonts API">開始使用 Google Fonts API  |  Google for Developers</a></li>
+                <li><a href="https://fonts.google.com/" target="_blank" title="google fonts">Google Fonts</a></li>
+            </ul>
         </div>
+        <div id="article2" class="main" style="margin-top: 10px;">
+            <h2 class="font-effect-emboss" style="color:grey;">New Lorem!</h2>
+            <p class="JetBrains-Mono">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil exercitationem, doloribus qui non dolores sapiente harum ipsam animi inventore error maiores vel expedita dolorem porro fugiat quo sit blanditiis?
+            </p>
+        </div>
+        <div id="article3" class="main" style="margin-top: 10px;">
+            <h2 class="font-effect-emboss" style="color:grey;">Another Lorem!</h2>
+            <div id="article3 content" class="JetBrains-Mono" >
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris gravida dui non leo vestibulum, non tincidunt nunc sollicitudin. Ut pretium ornare ex ac mattis. Vestibulum ac urna dictum, pretium tortor quis, lobortis neque. Cras sed lacus euismod, tempor nisi eu, porta nibh. Nulla in tortor tristique, maximus lectus id, feugiat neque. Proin in mi vestibulum, mattis tellus non, imperdiet ipsum. Vestibulum varius posuere fringilla. Pellentesque quis sapien risus. Fusce quis tincidunt leo.
+                </p>
+                <p>
+                    Duis commodo, orci eget tincidunt commodo, nisi tellus rutrum est, vitae sagittis erat metus in tellus. Sed mollis eros eu diam ultricies blandit. Morbi nec ante libero. Nunc tellus arcu, eleifend a augue non, interdum vestibulum mi. Praesent ut nisl nunc. Donec at interdum risus, quis consequat sapien. Aliquam vitae enim turpis. Etiam mollis eu libero vitae feugiat. Proin a dignissim tellus. Vestibulum vitae convallis leo. Cras egestas sollicitudin ipsum in pulvinar. Vivamus consequat est eget tortor tincidunt commodo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin dui justo, efficitur nec nulla quis, condimentum rhoncus eros. Fusce sem metus, posuere id sodales vel, auctor quis justo. Nunc efficitur lacus congue malesuada sagittis.
+                </p>
+                <p>
+                    Proin aliquet mattis ligula vel tristique. Phasellus ac arcu sed magna accumsan semper. Proin faucibus vehicula pharetra. In sit amet enim quis est dignissim condimentum. Vivamus quis vulputate lorem. Morbi ullamcorper metus sapien, eu imperdiet urna tempus ac. Nulla eleifend diam in risus dapibus fringilla. In eros mi, congue non pulvinar quis, rhoncus vel nibh. Proin eget porta eros, eget consequat turpis. Phasellus non ipsum vitae felis consequat convallis. Ut turpis augue, pellentesque gravida ligula at, ullamcorper ultrices tortor. Duis porta dignissim tempus. Vestibulum porttitor suscipit neque, eleifend auctor neque congue vel. Proin ultricies volutpat sapien, vitae dignissim sem vehicula in. Duis nec tempus nisi, vel dapibus risus.
+                </p>
+            </div>
     </main>
 </body>
 </html>

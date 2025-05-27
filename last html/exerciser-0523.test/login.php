@@ -23,10 +23,10 @@ if ($username === "admin" && $password === "0000") {
     網頁跳轉中，請稍後...
     <script>
         setTimeout(function() {
-            window.location.href = "index.php";
+            window.location.href = "/";
         }, 10000); // 10秒後跳轉
     </script>
-    <p>如果沒有自動跳轉，請點擊<a href="index.php">這裡</a>。</p>
+    <p>如果沒有自動跳轉，請點擊<a href="/">這裡</a>。</p>
     </div>
 </body>
 </html>
