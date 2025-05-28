@@ -16,6 +16,7 @@
             background: #EBDAE3;
             background: linear-gradient(90deg, rgba(235, 218, 227, 1) 0%, rgba(122, 29, 253, 0.45) 50%, rgba(252, 69, 197, 0.58) 100%);
             background-size: 200% 200%;
+            animation: gradient 15s ease infinite;
         }
         nav.toptext{
             display: flex;
@@ -66,6 +67,17 @@
             font-size: 16px;
             line-height: 1.5;
         }
+        @keyframes  gradient {
+            0% {
+                background-position: 0% 30%;
+            }
+            50% {
+                background-position: 80% 60%;
+            }
+            100% {
+                background-position: 0% 30%;
+            }
+        }
     </style>
 
 </head>
@@ -93,21 +105,26 @@
     <!--end of side; content-->
     <!--main-->
     <main>
-        <div id="article" class="headline">
-            <h1 class="font-effect-emboss" style="color:grey;">目前參考過的網頁：</h1>
-            <ul style="font-family: 'JetBrains Mono', monospace; font-size: 16px; line-height: 1.5;">
-                <li><a href="https://www.ptt.cc/index.bbs.html" target="_blank" title="ptt">ptt.cc/index.bbs.html</a></li>
-                <li><a href="https://developers.google.com/fonts/docs/getting_started?hl=zh-tw" target="_blank" title="Google fonts API">開始使用 Google Fonts API  |  Google for Developers</a></li>
-                <li><a href="https://fonts.google.com/" target="_blank" title="google fonts">Google Fonts</a></li>
-            </ul>
-        </div>
-        <div id="article2" class="main" style="margin-top: 10px;">
-            <h2 class="font-effect-emboss" style="color:grey;">New Lorem!</h2>
-            <p class="JetBrains-Mono">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil exercitationem, doloribus qui non dolores sapiente harum ipsam animi inventore error maiores vel expedita dolorem porro fugiat quo sit blanditiis?
-            </p>
-        </div>
-        <div id="article3" class="main" style="margin-top: 10px;">
+        <section>
+            <div class="headline">
+                <h1 class="font-effect-emboss" style="color:grey;">目前參考過的網頁：</h1>
+                <ul style="font-family: 'JetBrains Mono', monospace; font-size: 16px; line-height: 1.5;">
+                    <li><a href="https://www.ptt.cc/index.bbs.html" target="_blank" title="ptt">ptt.cc/index.bbs.html</a></li>
+                    <li><a href="https://developers.google.com/fonts/docs/getting_started?hl=zh-tw" target="_blank" title="Google fonts API">開始使用 Google Fonts API  |  Google for Developers</a></li>
+                    <li><a href="https://fonts.google.com/" target="_blank" title="google fonts">Google Fonts</a></li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div class="main" style="margin-top: 10px;">
+                <h2 class="font-effect-emboss" style="color:grey;">New Lorem!</h2>
+                <p class="JetBrains-Mono">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil exercitationem, doloribus qui non dolores sapiente harum ipsam animi inventore error maiores vel expedita dolorem porro fugiat quo sit blanditiis?
+                </p>
+            </div>
+        </section>
+        <section>
+        <div class="main" style="margin-top: 10px;">
             <h2 class="font-effect-emboss" style="color:grey;">Another Lorem!</h2>
             <div id="article3 content" class="JetBrains-Mono" >
                 <p>
@@ -120,6 +137,7 @@
                     Proin aliquet mattis ligula vel tristique. Phasellus ac arcu sed magna accumsan semper. Proin faucibus vehicula pharetra. In sit amet enim quis est dignissim condimentum. Vivamus quis vulputate lorem. Morbi ullamcorper metus sapien, eu imperdiet urna tempus ac. Nulla eleifend diam in risus dapibus fringilla. In eros mi, congue non pulvinar quis, rhoncus vel nibh. Proin eget porta eros, eget consequat turpis. Phasellus non ipsum vitae felis consequat convallis. Ut turpis augue, pellentesque gravida ligula at, ullamcorper ultrices tortor. Duis porta dignissim tempus. Vestibulum porttitor suscipit neque, eleifend auctor neque congue vel. Proin ultricies volutpat sapien, vitae dignissim sem vehicula in. Duis nec tempus nisi, vel dapibus risus.
                 </p>
             </div>
+        </section>
     </main>
 </body>
 </html>
