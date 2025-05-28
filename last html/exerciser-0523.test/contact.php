@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="5; url=exerciser-0523.test.html">
+    <meta http-equiv="refresh" content="5; url=exerciser-0523.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
         <legend>您的回覆內容</legend>
         <p>姓名: <?php echo htmlspecialchars($name); ?></p>
         <p>內容: <?php echo nl2br(htmlspecialchars($context)); ?></p>
-        <a href="exerciser-0523.test.html">返回首頁</a>
+        <a href="exerciser-0523.html">返回首頁</a>
     </fieldset>
 </body>
 </html>
