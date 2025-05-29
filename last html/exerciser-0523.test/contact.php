@@ -27,6 +27,7 @@
             width: 50%; 
             margin: auto;
             padding: 20px;
+            border: 0px;
             border-radius: 10px;
         }
     </style>
