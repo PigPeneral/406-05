@@ -50,14 +50,22 @@
             -ms-user-select: none;
             user-select: none;
         }
-        p.front:hover {
-            color: #78793771;
-            text-shadow: 0 0 20px #f5d56a;
+        .fontz{
+            z-index: -1;
         }
-        p.content {
+        p.f {
             color: white;
             font-size: 20px;
             padding: 10px;
+        }
+        p.content {
+            color: tomato;
+            font-size: 30px;
+            width: fit-content;
+            height: fit-content;
+            text-align: center;
+            margin: 0 10dvw 0 auto;
+            background-color: rgba(128, 128, 128, 0.301);
         }
         footer {
             position: fixed;
@@ -83,14 +91,23 @@
             </ul>
         </nav>
     </div>
-    <div id="background">
-        <p class="front">
+    <div id="main">
+        <div id="background">
+        <p class="front fontz">
             Hello, World!
         </p>
-    </div>
-    <div id="content">
-        <footer>
+        </div>
+        <div id="content">
             <p class="content">
+                歡迎來到我的網站！<br>
+                這是我的個人空間，請隨意瀏覽。<br>
+                如果有任何問題或建議，請隨時聯繫我。
+            </p>
+        </div>
+    </div>
+    <div id="footer">
+        <footer>
+            <p class="f">
                 底部<br>
             </p>
         </footer>
