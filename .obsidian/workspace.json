@@ -11,10 +11,14 @@
             "id": "90a305f8c89f0e06",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新分頁"
+              "title": "README"
             }
           }
         ]
@@ -161,6 +165,8 @@
       "command-palette:開啟命令面板": false
     }
   },
-  "active": "90a305f8c89f0e06",
-  "lastOpenFiles": []
+  "active": "3695360023ff64ed",
+  "lastOpenFiles": [
+    "md try.md"
+  ]
 }

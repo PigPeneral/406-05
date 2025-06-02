@@ -11,8 +11,7 @@
 
 個人目標：
 
-1. 將作業內容的要求集中，並打磨
-2. 了解python對於網頁後端的運用(像是search.py)
+1. 學會numpy和矩陣
 
 ### HTML and CSS
 
@@ -21,7 +20,12 @@
 1. 練習切版
 2. 讓頁面能妥善的自動調整大小
 3. 完善各頁面功能
+4. css animation
 
 ### AIOT
+
+yet.
+
+### Project
 
 yet.
