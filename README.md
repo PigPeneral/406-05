@@ -6,12 +6,8 @@
 
 課堂目標：
 
-1. 完成作業2
-2. 完成作業3
-
-個人目標：
-
-1. 學會numpy和矩陣
+1. 快速完成作業2, 作業3，減少AI排斥
+2. 針對numpy和pandas做學習和練習
 
 ### HTML and CSS
 
@@ -24,8 +20,8 @@
 
 ### AIOT
 
-yet.
+1. Arduino和Pi 5 開發
 
 ### Project
 
-yet.
+* Keep it simple and fun, not too complex.
