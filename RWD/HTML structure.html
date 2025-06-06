@@ -95,7 +95,49 @@ table快速展開：
 而gogoro的圖片可能無法存下來，那可能是因為它是透過CSS叫出，所以必須從CSS裡找出它。
 -->
 	<img src="img_header_logo.png" alt="X"> <!-- alt早期有些老師會說「這用不到所以刪掉」，但實際上這是一定要有的，alt可以做到搜尋最佳化(SEO) -->
-	<img src="http://fakeimg.pl/350x200/00CED1/FFF/?text=img+placeholder">
+	<br>
+	<img src="https://imgholder.ru/600x300/2196F3/ECEFF1.jpg&text=imgHolder&font=bebas&fz=36" alt="holder">
+
+<!-- 
+使用pexels找到示範用影片和圖片。
+使用Bensound找到示範用音樂。
+使用NCS找到無版權音樂。
+多媒體：
+<embed> 嵌入
+<object> 物件式
+
+HTML5: (更直觀)
+<video> 
+<audio> 
+-->
+	<video src="2797266-sd_960_540_25fps.mp4" loop autoplay muted> 
+	</video>
+<!-- 
+type提示格式
+controls=controls (或單純 controls) 讓使用者控制播放器 *A=A, True的概念
+loop 提供 loop
+autoplay 提供 自動播放
+muted 提供 靜音
+*
+來自：www.w3schools.com/
+Note: Chromium browsers do not allow autoplay in most cases. However, muted autoplay is always allowed.
+*
+-->
+
+	<video loop autoplay muted> 
+	<!--將source分出，然後提供兩種不同格式的來源來避免瀏覽器不支援的問題 -->
+		<source src=".mp4" type="video/mp4">
+		<source src=".ogg" type="video/ogg">
+	</video>
+
+	<audio src="epic-hybrid-logo-157092.mp3" controls>
+	</audio>
+
+	<audio controls>
+		<source src=".mp3" type="audio/mp3">
+		<source src=".ogg" type="audio/ogg">
+	</audio>
+
 
 </body>
 </html>
