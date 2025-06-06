@@ -1,0 +1,101 @@
+<!-- 快速註解ctrl+/ -->
+
+<!-- 
+課間註解：
+Sublime Text是老師推薦使用的輕量型編輯器，但是涉及到前後端串聯的作業，VS code可能會是更好的選擇。
+
+響應式網頁最基礎的一個呈現──gogoro的官方網站。
+即使是去看史萊姆的第一個家，他也是一樣的結構，但是他應該已經不算響應式網頁了，透過原始碼，可以看到一些比較早期的編寫風格。
+
+沒有<網頁文件類型宣告 DTD>會有什麼問題？ - 未來最佳化程式內容會容易有困難。
+
+網頁語言代碼亦然。
+
+gogoro的官方網站其網頁語言式標示 zh-TW ，但這比較不嚴謹。
+
+為方便伺服器識別，網頁檔案的存取基本上不使用中文，而是使用英文(小寫)。
+
+Sublime在存檔後，按下「F12」，可開啟檔案。
+
+亂文的意義：在網頁不確定文案內容時，填入亂文以協助排版和視覺編排。
+
+為何網頁要有標籤？編輯器中的換行網頁無法識別，需使用<h1>和<p>讓網頁知道段落，或是使用其他標籤做修改。
+
+emmet*
+可設定快速鍵。 使用：{ "keys": ["ctrl+shift+g"], "command": "emmet_wrap_with_abbreviation" } 快速標籤包覆段落。
+
+自動對齊：{ "keys": ["ctrl+shift+f"], "command": "reindent" , "args": {"single_line": false}}
+
+標籤是給瀏覽器看得，告訴他哪裡是文字、哪裡是表格。
+
+只要是給瀏覽器看的就要有一個標準架構。
+-->
+
+<!DOCTYPE html> <!-- 網頁文件類型宣告 DTD -->
+
+<html lang="zh-Hant-TW"> <!-- 網頁語言 -->
+
+<head> <!-- 網頁資訊(頁頭) -->
+	<meta charset="UTF-8"> <!-- 字元編碼 -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 行動裝置檢視區域，針對行動裝置的縮放調整 width=dw, scale=1.0 -->
+	<title>Document</title> <!-- 頁面標題 -->
+</head>
+
+<body> <!-- 頁面內容 -->
+	<h1>網頁測試</h1>
+	<p>Lorem ipsum dolor, sit amet consectetur, adipisicing elit. Ipsa recusandae neque, repellat ut, repellendus sed laboriosam maxime possimus cupiditate tempore magnam quasi libero delectus doloremque sequi amet doloribus distinctio assumenda similique facere et qui laudantium asperiores, perspiciatis dolore. Alias, odit quas voluptatibus quasi, at praesentium fugiat facilis sit reiciendis commodi!</p>
+
+	<h3>1st schedule</h3>
+	<h2>go yan</h2>
+	<h4>to yo</h4>
+	<h5>gowhere</h5>
+
+	<h1>web</h1>
+
+	<ol>
+		<li>HTML</li>
+		<li>CSS</li>
+		<li>JavaScript</li>
+	</ol>
+
+<!-- 
+table快速展開：
+例子：table>(tr>td*3)*4 
+-->
+
+	<table border="1" width="500" align="center"> <!-- 標籤屬性(早期)；如今多用CSS -->
+		<thead>
+			<td>MON</td>
+			<td>DAY</td>
+			<td>YER</td>
+		</thead>
+		<tbody>
+			<td>12</td>
+			<td>7</td>
+			<td>1998</td>
+		</tbody>
+		<tbody>
+			<td>9</td>
+			<td>13</td>
+			<td>1574</td>
+		</tbody>
+		<tfoot>
+			<td>8</td>
+			<td>17</td>
+			<td>1</td>
+		</tfoot>
+	</table>
+
+<!-- 
+影像：
+早期使用<img>，
+它不是嵌入，而是傳遞，因此檔案有可能會改變路徑而連結不到，因此無法被傳送。
+這也是為什麼通常會建議圖片和網頁放在一起。
+瀏覽器會讓使用者對img使用相關功能：如下載。 為什麼可以?
+而gogoro的圖片可能無法存下來，那可能是因為它是透過CSS叫出，所以必須從CSS裡找出它。
+-->
+	<img src="img_header_logo.png" alt="X"> <!-- alt早期有些老師會說「這用不到所以刪掉」，但實際上這是一定要有的，alt可以做到搜尋最佳化(SEO) -->
+	<img src="http://fakeimg.pl/350x200/00CED1/FFF/?text=img+placeholder">
+
+</body>
+</html>
