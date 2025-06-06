@@ -1,0 +1,41 @@
+body{
+	margin: 0;
+	background: black;
+	color: white;
+}
+header{
+	text-shadow: 4px 5px 3px gray;
+}
+header p{
+	text-align: right;
+}
+header p img{
+	width: 50px;
+	margin-right: 20px;
+}
+header h3{
+	font-size: 20px;
+	width: 700px;
+	margin: 50px auto;
+}
+header h5{
+	color: darkgray;
+	letter-spacing: 2px;
+	width: 700px;
+}
+section{
+	text-align: center;
+	width: 680px;
+	margin: 50px auto;
+}
+section img{
+	width: 200px;
+	margin: 10px;
+	scale: 1;
+	display: block;
+	position: absolute;
+	transition: scale 1s ease;
+	@starting-style{
+		scale: 0;
+	}
+}
