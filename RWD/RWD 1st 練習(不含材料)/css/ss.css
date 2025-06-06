@@ -27,13 +27,13 @@ section{
 	text-align: center;
 	width: 680px;
 	margin: 50px auto;
+	display: flex;
+	flex-flow: row wrap;
 }
 section img{
 	width: 200px;
 	margin: 10px;
 	scale: 1;
-	display: block;
-	position: absolute;
 	transition: scale 1s ease;
 	@starting-style{
 		scale: 0;

@@ -34,18 +34,18 @@ CSS如何整合? 三種方式
 	<!-- section -->
 	<section>
 		<!-- use ```img[src=Project1/images/w$.jpg]*12```-->
-		<img src="Project1/images/w1.jpg" alt="1st">
-		<img src="Project1/images/w2.jpg" alt="2nd">
-		<img src="Project1/images/w3.jpg" alt="3rd">
-		<img src="Project1/images/w4.jpg" alt="4th">
-		<img src="Project1/images/w5.jpg" alt="5th">
-		<img src="Project1/images/w6.jpg" alt="6th">
-		<img src="Project1/images/w7.jpg" alt="7th">
-		<img src="Project1/images/w8.jpg" alt="8th">
-		<img src="Project1/images/w9.jpg" alt="9th">
-		<img src="Project1/images/w10.jpg" alt="10th">
-		<img src="Project1/images/w11.jpg" alt="11th">
-		<img src="Project1/images/w12.jpg" alt="12th">
+		<img src="images/w1.jpg" alt="1st">
+		<img src="images/w2.jpg" alt="2nd">
+		<img src="images/w3.jpg" alt="3rd">
+		<img src="images/w4.jpg" alt="4th">
+		<img src="images/w5.jpg" alt="5th">
+		<img src="images/w6.jpg" alt="6th">
+		<img src="images/w7.jpg" alt="7th">
+		<img src="images/w8.jpg" alt="8th">
+		<img src="images/w9.jpg" alt="9th">
+		<img src="images/w10.jpg" alt="10th">
+		<img src="images/w11.jpg" alt="11th">
+		<img src="images/w12.jpg" alt="12th">
 	</section>
 	<!-- end of section -->
 	<!-- div -->
@@ -63,11 +63,11 @@ CSS如何整合? 三種方式
 		<!-- right aside div -->
 		<div>
 			<h4>FOLLOW</h4>
-			<img src="Project1/images/s1.png" alt="1">
-			<img src="Project1/images/s2.png" alt="2">
-			<img src="Project1/images/s3.png" alt="3">
-			<img src="Project1/images/s4.png" alt="4">
-			<img src="Project1/images/s5.png" alt="5">
+			<img src="images/s1.png" alt="1">
+			<img src="images/s2.png" alt="2">
+			<img src="images/s3.png" alt="3">
+			<img src="images/s4.png" alt="4">
+			<img src="images/s5.png" alt="5">
 		</div>
 		<!-- end of div -->
 		<!-- footer -->
