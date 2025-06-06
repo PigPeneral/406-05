@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-hant-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<!-- 
+版面區塊 <div> <section>
+
+其他 
+<hr> 水平線
+<br> 換行
+<span> 文字行中的子項目
+<iframe> 網頁中的內置框架，可連結到其他網頁
+iframe仍然有被使用，但是較古老的frame已被捨棄
+
+參考：microsoft.com
+-->
+<body>
+<!-- div預設邏輯測試 -->
+	<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Labore, quo placeat ex facilis vitae molestiae, veritatis. Officiis earum, omnis harum voluptate sapiente repudiandae, iure ea nam expedita laboriosam libero quisquam accusantium aliquam veniam impedit est repellat aspernatur voluptatum saepe veritatis blanditiis delectus? Et aliquid, fugiat placeat quis eligendi obcaecati recusandae.</p>
+
+	<div style="width:500px; background:yellow;">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugit debitis temporibus rerum tempore illo maiores quod nostrum adipisci. Sed in nam minima mollitia similique nesciunt sunt neque magnam facere, quod placeat, dignissimos totam animi ut facilis blanditiis vero, molestiae velit consequuntur necessitatibus saepe praesentium reiciendis. Itaque perferendis qui, necessitatibus!</p>
+	</div>
+<!-- 
+	老師：
+	div的預設寬度為與頁面同寬(100%)，但是他沒有寬度屬性，所以必須要用CSS給予，可以直接在標籤中使用style給予。
+	CSS中的單位是必須的。
+	要讓標籤標示清楚，在未來才能更方便透過搜尋來進行改良。
+-->
+	<div style="width:500px; background:yellow;">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugit debitis temporibus rerum tempore illo maiores quod nostrum adipisci. Sed in nam minima mollitia similique nesciunt sunt neque magnam facere, quod placeat, dignissimos totam animi ut facilis blanditiis vero, molestiae velit consequuntur necessitatibus saepe praesentium reiciendis. Itaque perferendis qui, necessitatibus!</p>
+	</div>
+<!-- 
+即使寬度只有500px，div還是會是垂直排列，這是它的預設規則 
+
+要讓div做出水平排列的方法至少有四種
+1. inline-block
+2. float (最老的方法)
+3. position
+4. 市面上受歡迎和討論的flex
+5. grid
+
+考量到瀏覽器支援性問題，flex和grid可能就不能用了。
+
+以下數個排列為自主練習。
+-->
+<hr>
+<!-- display: inline-block -->
+	<div style="width:500px; background:red; display:inline-block">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugit debitis temporibus rerum tempore illo maiores quod nostrum adipisci. Sed in nam minima mollitia similique nesciunt sunt neque magnam facere, quod placeat, dignissimos totam animi ut facilis blanditiis vero, molestiae velit consequuntur necessitatibus saepe praesentium reiciendis. Itaque perferendis qui, necessitatibus!</p>
+	</div>
+	<div style="width:500px; background:red; display:inline-block">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugit debitis temporibus rerum tempore illo maiores quod nostrum adipisci. Sed in nam minima mollitia similique nesciunt sunt neque magnam facere, quod placeat, dignissimos totam animi ut facilis blanditiis vero, molestiae velit consequuntur necessitatibus saepe praesentium reiciendis. Itaque perferendis qui, necessitatibus!</p>
+	</div>
+<!-- float -->
+<hr>
+	<div style="width:500px; background:green; float: inline-start;">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugit debitis temporibus rerum tempore illo maiores quod nostrum adipisci. Sed in nam minima mollitia similique nesciunt sunt neque magnam facere, quod placeat, dignissimos totam animi ut facilis blanditiis vero, molestiae velit consequuntur necessitatibus saepe praesentium reiciendis. Itaque perferendis qui, necessitatibus!</p>
+	</div>
+	<div style="width:500px; background:green; float: inline-start;">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugit debitis temporibus rerum tempore illo maiores quod nostrum adipisci. Sed in nam minima mollitia similique nesciunt sunt neque magnam facere, quod placeat, dignissimos totam animi ut facilis blanditiis vero, molestiae velit consequuntur necessitatibus saepe praesentium reiciendis. Itaque perferendis qui, necessitatibus!</p>
+	</div>
+<!-- postion  -->
+	<div style="width:500px; background:teal; position: static">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugit debitis temporibus rerum tempore illo maiores quod nostrum adipisci. Sed in nam minima mollitia similique nesciunt sunt neque magnam facere, quod placeat, dignissimos totam animi ut facilis blanditiis vero, molestiae velit consequuntur necessitatibus saepe praesentium reiciendis. Itaque perferendis qui, necessitatibus!</p>
+	</div>
+	<div style="width:500px; background:teal; position: relative; top:-124px; left: 500px;">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugit debitis temporibus rerum tempore illo maiores quod nostrum adipisci. Sed in nam minima mollitia similique nesciunt sunt neque magnam facere, quod placeat, dignissimos totam animi ut facilis blanditiis vero, molestiae velit consequuntur necessitatibus saepe praesentium reiciendis. Itaque perferendis qui, necessitatibus!</p>
+	</div>
+<!-- flex -->
+<hr>
+	<div style="display:flex;flex-flow: row;">
+		<div style="width:500px; background:pink;">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugit debitis temporibus rerum tempore illo maiores quod nostrum adipisci. Sed in nam minima mollitia similique nesciunt sunt neque magnam facere, quod placeat, dignissimos totam animi ut facilis blanditiis vero, molestiae velit consequuntur necessitatibus saepe praesentium reiciendis. Itaque perferendis qui, necessitatibus!</p>
+		</div>
+		<div style="width:500px; background:pink;">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugit debitis temporibus rerum tempore illo maiores quod nostrum adipisci. Sed in nam minima mollitia similique nesciunt sunt neque magnam facere, quod placeat, dignissimos totam animi ut facilis blanditiis vero, molestiae velit consequuntur necessitatibus saepe praesentium reiciendis. Itaque perferendis qui, necessitatibus!</p>
+		</div>
+	</div>
+<!-- 
+grid 
+這感覺比我預期的還要複雜得多，似乎要處理row和column
+參數和衍伸的部分還不太了解，不過grid裡面加/就能切欄出來，真是直觀到我覺得有點衝擊感。
+w3schools的css有寫到
+.grid-container > div
+應該是在找class grid-container 底下的div子項(我猜)
+-->
+<hr>
+	<div style="display: grid; grid: auto / auto auto ">
+		<div style="width:500px; background: orange;">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugit debitis temporibus rerum tempore illo maiores quod nostrum adipisci. Sed in nam minima mollitia similique nesciunt sunt neque magnam facere, quod placeat, dignissimos totam animi ut facilis blanditiis vero, molestiae velit consequuntur necessitatibus saepe praesentium reiciendis. Itaque perferendis qui, necessitatibus!</p>
+		</div>
+		<div style="width:500px; background:orange;">
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugit debitis temporibus rerum tempore illo maiores quod nostrum adipisci. Sed in nam minima mollitia similique nesciunt sunt neque magnam facere, quod placeat, dignissimos totam animi ut facilis blanditiis vero, molestiae velit consequuntur necessitatibus saepe praesentium reiciendis. Itaque perferendis qui, necessitatibus!</p>
+		</div>
+	</div>
+<!-- /練習區塊 -->
+<hr style="width:90%">
+<!-- iframe和字段子元素 -->
+	<div style="width:500px; background:grey;">
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius fugit debitis temporibus rerum tempore illo maiores<span style="color:yellow"> quod nostrum adipisci. Sed in nam minima mollitia similique nesciunt sunt neque magnam facere, quod placeat</span>, dignissimos totam animi ut facilis blanditiis vero, molestiae velit consequuntur necessitatibus saepe praesentium reiciendis.<br> Itaque perferendis qui, necessitatibus!</p>
+	</div>
+	<!-- 嵌入網站 -->
+	<iframe src="HTML structure.html" frameborder="1" style="width:100dvw"></iframe>
+<!-- 
+區塊與非區塊的差異：
+開始標籤與結束遷的要求 
+
+區塊受寬度和高度影響，
+非區塊不受影響。
+
+區塊預設排列規則是垂直的，
+非區塊預設排列規則是水平的。
+
+接下來進入HTML5
+-->
+</body>
+</html>
