@@ -1,0 +1,2 @@
+USE madb_n;	
+SELECT EMPNO AS 員工編號, ENAME AS 姓名有C僱員 FROM emp WHERE ENAME LIKE '%c%'

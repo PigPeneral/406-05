@@ -1,0 +1,2 @@
+USE madb_n;
+SELECT ENAME AS 姓名, SAL AS 薪資, ROUND(SAL/30, 1) AS 日薪 FROM emp 
