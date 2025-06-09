@@ -1,10 +1,10 @@
 #import
 import matplotlib.pyplot as plt
 import pandas as pds
-import mysql.connector as pymssql
+import mysql.connector as pymysql
 
 #connector set up
-db = pymssql.connect(
+db = pymysql.connect(
     host='localhost',           # 連線主機名稱
     user='root',                # 登入帳號
     password='',
