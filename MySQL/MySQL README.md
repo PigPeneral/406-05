@@ -15,7 +15,7 @@
 1. ***USE***
 
 ```sql
-USE DATABASE_1
+USE DATABASE_1;
 ```
 
 USE表示「使用」，DATABASE_1為資料庫名稱。
@@ -26,7 +26,7 @@ USE表示「使用」，DATABASE_1為資料庫名稱。
 
 ```sql
 USE DATABASE_1;
-SELECT * FROM TABLE_1
+SELECT * FROM TABLE_1;
 ```
 
 此指令的意涵為「使用DATABASE_1資料庫」以及「在資料庫之中尋找 TABLE_1 表」
@@ -37,7 +37,7 @@ SELECT * FROM TABLE_1
 
 ```sql
 SELECT COL_A, COL_B FROM TABLE_1
-WHERE conditions
+WHERE conditions;
 ```
 
 SELECT, FROM, WHERE 被視為同一個指令，但是他的執行順序並不是：
@@ -49,5 +49,8 @@ SELECT, FROM, WHERE 被視為同一個指令，但是他的執行順序並不是
 1. **FROM - 找到資料來源**
 2. **WHERE - *篩選是否符合條件***
 3. **SELECT - 選擇欄位**
+
+經查詢，完整的順序如下：
+**FROM → JOIN → WHERE → GROUP BY → HAVING → SELECT → ORDER BY → LIMIT**
 
 - 待續
