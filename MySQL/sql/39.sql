@@ -1,0 +1,12 @@
+USE madb_n;
+SELECT E0.DEPTNO AS 部門編號,
+	E0.ENAME AS 僱員,
+    E0.JOB AS 職務,
+    E0.SAL AS 薪資
+    FROM emp E0
+WHERE (
+    SELECT COUNT(DISTINCT E1.SAL)
+    FROM emp E1
+    WHERE E1.DEPTNO = E0.DEPTNO 
+      AND E1.SAL > E0.SAL
+) = 1;
