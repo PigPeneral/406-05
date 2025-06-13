@@ -8,13 +8,12 @@ db = pymysql.connect(
     host='localhost',           # 連線主機名稱
     user='root',                # 登入帳號
     password='',
-    database = "*"   # 連接指定的 DATABASE
+    database = "f1180024"   # 連接指定的 DATABASE
 )
 
 #try
 cursor = db.cursor()
 cursor.execute("SELECT * FROM employee ORDER BY 目前月薪資 ASC;")
-
 results = cursor.fetchall()
 for row in results:
     print('row = %r' % (row,))

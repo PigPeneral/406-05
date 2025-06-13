@@ -125,6 +125,15 @@ ORDER BY FIC.PRICE ASC;
 在`JOIN`指令的類別中，除`INNER`還有`FULL`(MySQL不直接支援), `LEFT`, `RIGHT`。
 在沒有指示類別的狀況下，單純的`JOIN`會被視為`INNER JOIN`。
 
+* `USING`讓兩個表之間相同名稱的欄位連結
+
+例如：
+```sql
+SELECT * 
+FROM TABLE_A AS A -- 假設A表和B表都有名稱為C的欄位
+JOIN TABLE_B AS B USING (C) -- 效果等同 ON A.C = B.C
+```
+
 ### *HAVING*
 
 根據[W3school](https://www.w3schools.com/sql/sql_having.asp)的範例：
