@@ -9,7 +9,9 @@ def main():
         engine = alchemy_engine() #從Connector引進方法，並在這裡建立連線
         command = command_select(questionSQ) #從Connector的字典取得指令內容
         print("使用指令："+f"{command}")
+        print("\n") #換行
         pd_read(command, engine) #將指令內容傳送給已連線的資料庫，並輸出
+        print("\n")  # 換行
 
 if __name__ == '__main__':
     main()
