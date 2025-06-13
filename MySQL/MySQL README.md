@@ -83,9 +83,13 @@ ORDER BY A.PRICE ASC,
 ```
 
 在這段指令中，根據邏輯順序，會先從`FROM`中找到`TABLE_1`和`TABLE_2`，它們各自被取了一個別名`AS A`和`AS B`，這邊的`AS`是可以省略的。
+
 接著，根據`WHERE`提供的條件，找到`A.PRICE`和`B.PRICE`不為空值(`NULL`)的資料。`NULL`值只能透過邏輯運算`IS`和`NOT`去作運算，不能透過`=`或`!=`或`<>`。
+
 再來，透過`GROUP BY`找到`A`(也就是前面的`TABLE_1`) 表中的`SHELL`欄位進行一次分類，它會將與`A.SHELL`有相同值的資料合併成一組。
+
 接著，程式才會這些指令中`SELECT`出`A`表中的`PRICE`和`B`表中的`PRICE`，並將欄位透過`AS`取別名為`A PRICE`和`B PRICE`。
+
 最後，透過`ORDER BY`指令，對`A.PRICE`進行升序排列，然後再對`B.PRICE`進行降序排列。
 
 ### *JOIN*
