@@ -6,16 +6,12 @@
 
 ## 進度概要
 
----
-
-### python
+### Python
 
 課堂目標：
 
 1. 作業2, 作業3，減少AI排斥
 2. 針對numpy和pandas做學習和練習
-
----
 
 ### HTML and CSS
 
@@ -26,13 +22,15 @@
 3. 完善各頁面功能
 4. css animation
 
----
-
 ### AIOT
 
 1. Arduino和Pi 5 開發
 
----
+### Databases
+
+1. 我-我不知道欸。
+2. 我蠻想繼續用Python寫程式連接MySQL的。
+3. 多練習、習慣SQL的邏輯吧。
 
 ### Pearson VUE ITS
 
