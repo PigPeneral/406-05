@@ -111,9 +111,9 @@ ORDER BY FIC.PRICE ASC;
 
 參考以上範例，這邊使用的`JOIN`指令是`INNER JOIN`，按照`JOIN`指令的邏輯，`INNER`是`JOIN`的類別(稍後會解釋這個類別的特徵)，在`JOIN`之後，我們先引入一個資料`Fruity_Member`並取別名作`FM`，然後在`ON`之後寫入條件：
 
-1. `FM.MEMBER_NAME = FIC.NAME` 使用`ON`確認`FM.MEMBER_NAME`與`FIC.NAME`連結的條件，並比較他們是否在`FIC`(也就是指令前面的`Fruity_Ice_Cream`的別名)表中的`'NAME'`欄之中。
+1. `FM.MEMBER_NAME = FIC.NAME` 使用`ON`確認`FM.MEMBER_NAME`與`FIC.NAME`連結的條件，並比較他們是否在`FIC`(也就是指令前面的`Fruity_Ice_Cream`的別名)表中的`NAME`欄之中。
 2. `FM.MEMBER_NAME NOT LIKE '水果奶奶'` 表示從`FM`表中取出`MEMBER_NAME`欄的資料，並比較他們是否與'水果奶奶'不同。
-3. 再來，從`FM`中找到`MEMBER_DEP`，篩選出內容為`'CAST'`的資料。
+3. 再來，從`FM`中找到`MEMBER_DEP`，篩選出內容為`CAST`的資料。
 
 在這一串`JOIN`的邏輯中，`INNER`使這一串條件嚴格篩選，引入的表和`FROM`使用的表必須要完全符合條件才會被留下。
 
@@ -146,3 +146,16 @@ ORDER BY column_name(s);
 * `HAVING`：篩選「分組後的結果」
 
 應避免在`HAVING`中使用複雜運算。
+
+```sql
+SELECT FINGERS,
+    `LENGTH`, -- 這是註解，`LENGTH`是為了避免與保留詞LENGTH()衝突
+    FINGERS_ID AS ID,
+    COUNT(*) AS 'FINGERS COUNT' -- 數出全部(*)有幾行
+    FROM JOHNS_HANDS AS JH
+WHERE FINGERS IN ('POINTER', 'MIDDLE')
+GROUP BY FINGERS
+HAVING COUNT(*) < 10
+    AND AVG(COUNT(*)) < 5
+ORDER BY COUNT(*) ASC;
+```
