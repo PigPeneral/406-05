@@ -184,4 +184,33 @@ ORDER BY COUNT(FINGERS) ASC;
 | POINTER  | 4.3  | 6 |1| R |
 | MIDDLE  | 5.2 | 7 |1| R |
 
-可以發現到`COUNT(FINGERS)`在這裡好像沒什麼意義，其實我也不知道我在寫什麼。
+可以發現到`COUNT(FINGERS)`在這裡好像沒什麼意義，其實我也不太清楚我在寫什麼。
+
+### 編寫風格
+
+SQL的編寫風格我基本上是參考自AI的寫法，AI使用了大量的縮排和換行，我認為這有助於我閱讀，以下是我目前的編寫風格(內容沒有什麼意義，別深究)：
+
+```sql
+USE MYDATABASE;
+SELECT A.ONE,
+    A.TWO AS "2", -- 避免使用單引號作為別名（容易與字串常數混淆）
+    CASE
+        WHEN A.THREE = 1 THEN B.THREE
+        ELSE A.THREE + B.THREE
+    END AS "3",
+    MAX(A.FOUR) AS MAX_FOUR,
+FROM MYTABLE_A AS A,
+    MYTABLE_B AS B -- 隱式 CROSS JOIN (不建議使用)
+LEFT JOIN ( -- 顯式 LEFT JOIN
+    SELECT B.ONE,
+        B.TWO,
+        B.THREE - B.FOUR AS "NEW B THREE"
+    FROM MYTABLE_B
+) AS C ON A.ONE = C.ONE
+WHERE C."NEW B THREE" < (
+    SELECT MAX(ONE) FROM MYTABLE_A
+)
+GROUP BY A.ONE, A.TWO, A.THREE, B.THREE
+HAVING A.ONE LIKE '%A%'
+ORDER BY A.ONE ASC;
+```
