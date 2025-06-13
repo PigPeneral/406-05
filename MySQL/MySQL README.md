@@ -122,5 +122,5 @@ ORDER BY FIC.PRICE ASC;
 * `ON`：用於定義表格之間的連接條件
 * `WHERE`：用於篩選最終結果
 
-在`JOIN`指令的類別中，除`INNER`還有`FULL`, `LEFT`, `RIGHT`。
+在`JOIN`指令的類別中，除`INNER`還有`FULL`(MySQL不直接支援), `LEFT`, `RIGHT`。
 在沒有指示類別的狀況下，單純的`JOIN`會被視為`INNER JOIN`。
