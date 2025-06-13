@@ -124,3 +124,25 @@ ORDER BY FIC.PRICE ASC;
 
 在`JOIN`指令的類別中，除`INNER`還有`FULL`(MySQL不直接支援), `LEFT`, `RIGHT`。
 在沒有指示類別的狀況下，單純的`JOIN`會被視為`INNER JOIN`。
+
+### *HAVING*
+
+根據[W3school](https://www.w3schools.com/sql/sql_having.asp)的範例：
+
+```sql
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+HAVING condition
+ORDER BY column_name(s);
+```
+
+`HAVING`被用在「你需要新增條件，但是沒辦法寫`WHERE`的地方。」
+
+而網路上有種解釋為：
+
+* `WHERE`：篩選「原始資料列」
+* `HAVING`：篩選「分組後的結果」
+
+應避免在`HAVING`中使用複雜運算。
