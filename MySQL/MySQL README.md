@@ -150,12 +150,38 @@ ORDER BY column_name(s);
 ```sql
 SELECT FINGERS,
     `LENGTH`, -- 這是註解，`LENGTH`是為了避免與保留詞LENGTH()衝突
-    FINGERS_ID AS ID,
-    COUNT(*) AS 'FINGERS COUNT' -- 數出全部(*)有幾行
-    FROM JOHNS_HANDS AS JH
+    ID AS 'FINGERS ID',
+    COUNT(FINGERS) AS 'FINGERS COUNT', -- 數出手指有幾隻
+    `L/R`
+    FROM JOHNS_HANDS
 WHERE FINGERS IN ('POINTER', 'MIDDLE')
-GROUP BY FINGERS, `LENGTH`, FINGERS_ID
-HAVING COUNT(*) < 10
-    AND AVG(COUNT(*)) < 5
-ORDER BY COUNT(*) ASC;
+GROUP BY FINGERS, `LENGTH`, ID, `L/R`
+HAVING COUNT(FINGERS) < 10
+ORDER BY COUNT(FINGERS) ASC;
 ```
+
+這邊我們假設`JOHNS_HANDS`長這樣：
+
+| ID | FINGERS | LENGTH | L/R |
+|----|--------|------| -----|
+| 1  | POINTER  | 4.3   | L |
+| 2  | MIDDLE    | 5.1  | L |
+| 3  | RING  | 4.0   | L |
+| 4  | THUMB  | 3.3  | L |
+| 5 | LITTLE| 3.0 | L |
+| 6  | POINTER  | 4.3   | R |
+| 7  | MIDDLE    | 5.2  | R |
+| 8  | RING  | 4.0   | R |
+| 9  | THUMB  | 3.2  | R |
+| 10 | LITTLE| 2.9 | R |
+
+預期從資料庫中抓取出的資料應該要長：
+
+| FINGERS | LENGTH | FINGERS ID | COUNT | L/R |
+|--------|----|----| -----| ---|
+| POINTER  | 4.3  | 1 |1 | L |
+| MIDDLE    | 5.1 | 2 |1| L |
+| POINTER  | 4.3  | 6 |1| R |
+| MIDDLE  | 5.2 | 7 |1| R |
+
+可以發現到`COUNT(FINGERS)`在這裡好像沒什麼意義，其實我也不知道我在寫什麼。
