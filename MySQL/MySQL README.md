@@ -25,7 +25,7 @@ USE DATABASE_1;
 SELECT * FROM TABLE_1;
 ```
 
-此指令的意涵為「使用DATABASE_1資料庫」以及「在資料庫之中尋找 TABLE_1 表」
+此指令的意涵為「使用`DATABASE_1`資料庫」以及「在資料庫之中尋找 `TABLE_1` 表」
 
 ### *執行順序的邏輯*
 
@@ -61,10 +61,10 @@ WHERE USERNAME LIKE '___E'
 
 如上面所提，`WHERE`指令會提供條件，在以上這段程式中目標資料的條件是：
 
-1. `USERNAME LIKE '___E'`：這個條件會篩選 USERNAME 欄位中總長度為4個字符，且結尾為 E 的資料，其中`_`表示任意一個字符
-2. `U_TYPE LIKE '%NORMAL%'`：這個條件會篩選所有 U_TYPE 欄位中包含 `NORMAL` 的資料，其中`%`表示任意長度字符
-3. `SHORT_ID > 3`：這個條件會篩選 SHORT_ID 欄位中數值大於3的資料
-4. `SEQ_DAY < '2024-8-3'`：這個條件會篩選 SEQ_DAY 欄位中日期早於2024年8月3號的資料，值得注意的是SQL中自動辨識日期格式的特徵
+1. `USERNAME LIKE '___E'`：這個條件會篩選 `USERNAME` 欄位中總長度為4個字符，且結尾為 E 的資料，其中`_`表示任意一個字符
+2. `U_TYPE LIKE '%NORMAL%'`：這個條件會篩選所有 `U_TYPE` 欄位中包含 `NORMAL` 的資料，其中`%`表示任意長度字符
+3. `SHORT_ID > 3`：這個條件會篩選 `SHORT_ID` 欄位中數值大於3的資料
+4. `SEQ_DAY < '2024-8-3'`：這個條件會篩選 `SEQ_DAY` 欄位中日期早於2024年8月3號的資料，值得注意的是SQL中自動辨識日期格式的特徵
 
 值得注意的是，根據網路資料，`LIKE`和`=`的功能相仿；但是`=`是相對精確的比較，而`LIKE`則更為模糊，一般而言，對於已知資訊來說使用`=`會是更符合效能的選項，而`LIKE`則適合用於找到「相似」的資料。
 
@@ -105,7 +105,7 @@ FROM Fruity_Ice_Cream AS FIC
 INNER JOIN Fruity_Member AS FM
     ON FM.MEMBER_NAME = FIC.NAME
     WHERE FM.MEMBER_NAME NOT LIKE '水果奶奶'
-    AND FM.MEMBER_DEP = 'CAST'
+        AND FM.MEMBER_DEP = 'CAST'
 ORDER BY FIC.PRICE ASC;
 ```
 
@@ -128,6 +128,7 @@ ORDER BY FIC.PRICE ASC;
 * `USING`讓兩個表之間相同名稱的欄位連結
 
 例如：
+
 ```sql
 SELECT * 
 FROM TABLE_A AS A -- 假設A表和B表都有名稱為C的欄位
