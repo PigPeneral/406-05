@@ -82,7 +82,7 @@ ORDER BY A.PRICE ASC,
     B.PRICE DESC;
 ```
 
-在這段指令中，根據邏輯順序，會先從`FROM`中找到`TABLE_1`和`TABLE_2`，它們各自被取了一個別名`AS A`和`AS B`，這邊的`AS`是可以省略的。
+在這段指令中，根據邏輯順序，會先從`FROM`中找到`TABLE_1`和`TABLE_2`，它們各自使用`AS`指令被取了別名`A`和`B`，這邊的`AS`是可以省略的，若省略，它會長這樣`TABLE_1 A, TABLE_2 B`。
 
 接著，根據`WHERE`提供的條件，找到`A.PRICE`和`B.PRICE`不為空值(`NULL`)的資料。`NULL`值只能透過邏輯運算`IS`和`NOT`去作運算，不能透過`=`或`!=`或`<>`。
 
