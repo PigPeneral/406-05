@@ -96,7 +96,7 @@ ORDER BY A.PRICE ASC,
 
 `JOIN`可謂我學習sql時的一大困擾，使用這個指令時，最主要的問題就是：我想得到它，我也會寫它，但是我其實不太懂它為什麼行？又為什麼會不行？
 
-我最常遇到的一個錯誤訊息就是「ERROR CODE: 1111. Invaild use of group function.」(這則訊息和`GROUP BY`指令有關)
+我最常遇到的一個錯誤訊息就是「ERROR CODE: 1111. Invalid use of group function.」(這則訊息和`GROUP BY`指令有關)
 
 ```sql
 SELECT FIC.NAME AS 水果,
@@ -173,26 +173,26 @@ ORDER BY COUNT(FINGERS) ASC;
 這邊我們假設`JOHNS_HANDS`長這樣：
 
 | ID | FINGERS | LENGTH | L/R |
-|----|--------|------| -----|
-| 1  | POINTER  | 4.3   | L |
-| 2  | MIDDLE    | 5.1  | L |
-| 3  | RING  | 4.0   | L |
-| 4  | THUMB  | 3.3  | L |
-| 5 | LITTLE| 3.0 | L |
-| 6  | POINTER  | 4.3   | R |
-| 7  | MIDDLE    | 5.2  | R |
-| 8  | RING  | 4.0   | R |
-| 9  | THUMB  | 3.2  | R |
-| 10 | LITTLE| 2.9 | R |
+|----|---------|--------|-----|
+| 1  | POINTER | 4.3    | L   |
+| 2  | MIDDLE  | 5.1    | L   |
+| 3  | RING    | 4.0    | L   |
+| 4  | THUMB   | 3.3    | L   |
+| 5  | LITTLE  | 3.0    | L   |
+| 6  | POINTER | 4.3    | R   |
+| 7  | MIDDLE  | 5.2    | R   |
+| 8  | RING    | 4.0    | R   |
+| 9  | THUMB   | 3.2    | R   |
+| 10 | LITTLE  | 2.9    | R   |
 
 預期從資料庫中抓取出的資料應該要長：
 
 | FINGERS | LENGTH | FINGERS ID | COUNT | L/R |
-|--------|----|----| -----| ---|
-| POINTER  | 4.3  | 1 |1 | L |
-| MIDDLE    | 5.1 | 2 |1| L |
-| POINTER  | 4.3  | 6 |1| R |
-| MIDDLE  | 5.2 | 7 |1| R |
+|---------|--------|------------|-------|-----|
+| POINTER | 4.3    | 1          | 1     | L   |
+| MIDDLE  | 5.1    | 2          | 1     | L   |
+| POINTER | 4.3    | 6          | 1     | R   |
+| MIDDLE  | 5.2    | 7          | 1     | R   |
 
 可以發現到`COUNT(FINGERS)`在這裡好像沒什麼意義，其實我也不太清楚我在寫什麼。
 
