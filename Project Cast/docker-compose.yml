@@ -1,0 +1,114 @@
+services:
+  # 【PHP Apache 服務】
+  php-app:
+    build: 
+      context: ./php  # 【修正】對應實際的 php/ 目錄
+      dockerfile: Dockerfile
+    container_name: php-web-option  # 【自訂】容器名稱
+    ports:
+      - "8080:80"  # 【自訂】主機端口:容器端口
+    volumes:
+      - ./php:/var/www/html  # 【修正】對應實際的 php/ 目錄
+      - php-logs:/var/log/apache2    # Apache 日誌持久化
+    environment:
+      - APACHE_RUN_USER=www-data     # Apache 執行用戶
+      - APACHE_RUN_GROUP=www-data    # Apache 執行群組
+    depends_on:
+      - mysql  # 依賴 MySQL 服務先啟動
+    networks:
+      - container-network
+    restart: unless-stopped  # 容器重啟策略
+  
+  # 【Django 應用服務】
+  django-app:
+    build:
+      context: ./django  # 【自訂】Django專案目錄路徑
+      dockerfile: Dockerfile     # 需要建立 Django 的 Dockerfile
+    container_name: django    # 【自訂】容器名稱
+    ports:
+      - "8000:8000"  # 【自訂】主機端口:容器端口
+    volumes:
+      - ./django:/app/django  
+      - django-static:/app/static  # 靜態檔案持久化
+      - django-media:/app/media   # 媒體檔案持久化
+    environment:
+      - DEBUG=True                   # 【自訂】調試模式（生產環境設為0）
+      - SECRET_KEY=619D97675739646FEC318ABAF5786  # 【自訂】Django 密鑰
+      - DATABASE_URL=mysql://django_user:django_pass@mysql:3306/django_db  # 【自訂】資料庫連線
+      - DJANGO_ALLOWED_HOSTS=localhost,127.0.0.1,django-app,caddy
+    depends_on:
+      - mysql
+    networks:
+      - container-network
+    restart: unless-stopped
+
+  # 【MySQL 資料庫服務】
+  mysql:
+    image: mysql:8.0  # 【自訂】MySQL 版本
+    container_name: mysql-temp-database  # 【自訂】容器名稱
+    ports:
+      - "3306:3306"  # 【自訂】主機端口:容器端口
+    volumes:
+      - mysql-data:/var/lib/mysql     # 資料庫資料持久化
+      - ./mysql-init:/docker-entrypoint-initdb.d  # 【自訂】初始化 SQL 腳本目錄
+    environment:
+      - MYSQL_ROOT_PASSWORD=t001     # 【自訂】root 密碼
+      - MYSQL_DATABASE=zeavs_db              # 【自訂】預設建立的資料庫
+      - MYSQL_USER=User1                # 【自訂】應用程式用戶
+      - MYSQL_PASSWORD=1pusher            # 【自訂】應用程式密碼
+    networks:
+      - container-network
+    restart: unless-stopped
+
+  # 【phpMyAdmin 資料庫管理介面】
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: phpmyadmin-control-panel  # 【自訂】容器名稱
+    ports:
+      - "8080:80"  # 【自訂】主機端口:容器端口
+    environment:
+      - PMA_HOST=mysql               # 連接的 MySQL 服務名稱
+      - PMA_PORT=3306               # MySQL 端口
+      - PMA_USER=root               # 【自訂】登入用戶
+      - PMA_PASSWORD=t001  # 【自訂】登入密碼
+    depends_on:
+      - mysql
+    networks:
+      - container-network
+    restart: unless-stopped
+
+  # 【Caddy 反向代理服務】
+  caddy:
+    image: caddy:2-alpine  # 【自訂】Caddy 版本
+    container_name: caddy-proxy-explore  # 【自訂】容器名稱
+    ports:
+      - "80:80"    # HTTP 端口
+      - "443:443"  # HTTPS 端口
+      - "2019:2019"  # Caddy 管理介面端口
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile  # Caddy 設定檔
+      - caddy-data:/data                   # Caddy 資料持久化
+      - caddy-config:/config               # Caddy 設定持久化
+    depends_on:
+      - php-app
+      - django-app
+    networks:
+      - container-network
+    restart: unless-stopped
+
+# 【網路設定】
+networks:
+  container-network:
+    driver: bridge  # 【自訂】網路驅動類型
+    ipam:
+      config:
+        - subnet: 172.30.0.0/16  # 【自訂】子網路範圍
+
+# 【資料卷設定】
+volumes:
+  mysql-data:        # MySQL 資料持久化
+  php-logs:          # PHP/Apache 日誌
+  django-static:     # Django 靜態檔案
+  django-media:      # Django 媒體檔案
+  caddy-data:        # Caddy 資料
+  caddy-config:      # Caddy 設定
