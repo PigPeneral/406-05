@@ -118,8 +118,7 @@
         let html = ""
         itemList.forEach(value => {
             html += `
-                <div
-                    class="${value.gradientClass} backdrop-blur-custom rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300 ease-in-out overflow-hidden flex flex-col">
+                <div class="${value.gradientClass} backdrop-blur-custom rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300 ease-in-out overflow-hidden flex flex-col">
                     <div class="p-4 flex-grow flex flex-col items-center justify-center">
                         <img src="${value.img}" alt="${value.title}" class="h-32 w-auto object-contain mb-4">
                         <h3 class="text-lg font-semibold text-center mb-2">${value.title}</h3>
