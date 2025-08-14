@@ -25,8 +25,9 @@
 
 ### Databases
 
-1. 我-我不知道欸。
-3. 多練習、習慣SQL的邏輯吧。
+1. MySQL
+2. 考試是MSSQL
+3. 進入MongoDB
 
 ### Pearson VUE ITS
 
