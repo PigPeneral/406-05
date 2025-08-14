@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+	<meta charset="utf-8">
+	<title>Javascript-7-綜合練習</title>
+	<style>
+		h3{
+			color:#990066;
+			background-color:#E9EBAA;
+		}
+		h4{
+			color:#2A2DAD;
+		}
+	</style>
+	<script>
+		let inputNumber=prompt("輸入數字(1~3)")
+		let judge=(inputNumber>3)?"輸入錯誤!" :"今日運勢";
+		console.log(typeof(judge))
+		let luckyInfo=["好運到來","桃花旺旺","投資大滿貫"]
+		console.log("你今日的運勢 "+luckyInfo[inputNumber-1])
+	</script>
+</head>
+
+<body>
+
+</body>
+</html>
+<!-- 
+請設計當使用者輸入的數字大於3 則出現輸入錯誤的訊息視窗<
+再設計使用者輸入的數字可以對照呈現出今天的運勢
+  例如輸入1顯示好運到來 
+  例如輸入2顯示桃花旺旺
+  例如輸入3顯示投資大滿貫  
+
+-->
+

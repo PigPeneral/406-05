@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>判斷頁面是否下載完畢</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            background-color: rgb(28, 39, 58);
+            text-align: center;
+            padding-top: 10%;
+        }
+    </style>
+    <script>
+        const loadOk = function () {
+            document.write("<img src='images/kk.gif' style='display: block;margin:0 auto;' alt=''>" +
+                "<p style='color: blue; text-align: center'>載入完成！</p>")
+        }
+        window.onload = loadOk;
+    </script>
+</head>
+<body>
+<img src="images/loading.gif" alt="">
+</body>
+</html>
+<!-- ....設計當頁面載入完畢就出現圖片 kk.gif-->

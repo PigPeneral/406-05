@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>計數練習3-箭頭函式</title>
+</head>
+<body>
+<button id="add">add</button>
+<button id="minus">minus</button>
+<button id="reset">reset</button>
+<form action="" name="myForm"><input type="text" name="info" id="info"></form>
+<script>
+    let count=0;
+    let infoValue=document.getElementById("info");
+    const addBtn=document.getElementById("add");
+    const minusBtn=document.getElementById("minus");
+    const resetBtn=document.getElementById("reset");
+    document.myForm.info.value=count;
+    addBtn.onclick= () => {
+        count+=1
+        infoValue.value=count;
+    }
+    minusBtn.onclick= () => {
+        count-=1
+        infoValue.value=count;
+    }
+    resetBtn.onclick= () => {
+        count=0;
+        infoValue.value=count;
+    }
+
+    const funtest = () =>{
+        console.log("test");
+    }
+    alert(funtest);
+
+    const cal = (a,b) => a+b
+
+    //this 只能呼叫外層
+    const person = function () {
+        const name = "test";
+        const age = 20;
+        const say = () => {
+            console.log(this.name);
+        }
+        say();
+        const p=new person();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>8th Practise</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            crossorigin="anonymous"></script>
+    <style>
+        .logo-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto;
+            border-radius: 100px;
+        }
+
+        .skew1 {
+            position: relative;
+            height: 300px;
+            transform: skewY(15deg) translate(0px, -150px);
+            z-index: -1000;
+        }
+
+        .skew2 {
+            position: relative;
+            height: 300px;
+            transform: skewY(-15deg) translate(0px, -150px);
+            z-index: -1000;
+        }
+
+        .skew3 {
+            position: relative;
+            height: 30px;
+            transform: skewY(15deg) translate(0px, -150px);
+            z-index: -1000;
+        }
+
+        .skew4 {
+            position: relative;
+            height: 30px;
+            transform: skewY(-15deg) translate(0px, -150px);
+            z-index: -1000;
+        }
+
+        .skew5 {
+            position: relative;
+            height: 30px;
+            transform: skewY(15deg) translate(0px, -150px);
+            z-index: -1000;
+        }
+
+        .skew6 {
+            position: relative;
+            height: 30px;
+            transform: skewY(-15deg) translate(0px, -150px);
+            z-index: -1000;
+        }
+
+        .skew7 {
+            position: relative;
+            height: 30px;
+            transform: skewY(15deg) translate(0px, 150px);
+            z-index: -1000;
+        }
+
+        .skew8 {
+            position: relative;
+            height: 30px;
+            transform: skewY(-15deg) translate(0px, 150px);
+            z-index: -1000;
+        }
+
+        .skew9 {
+            position: relative;
+            height: 300px;
+            transform: skewY(15deg) translate(0px, 150px);
+            z-index: -1000;
+        }
+
+        .skew10 {
+            position: relative;
+            height: 300px;
+            transform: skewY(-15deg) translate(0px, 150px);
+            z-index: -1000;
+        }
+
+        .icon-replace {
+            position: relative;
+            z-index: 100;
+            top: 50%;
+            color: white;
+            opacity: 0;
+            transition: all 1.4s ease-out;
+        }
+
+        .service-item img {
+            transition: all 0.8s ease;
+        }
+
+        .service-item:hover img {
+            scale: 0.95;
+            filter: brightness(0.2);
+        }
+
+        .service-item:hover .icon-replace {
+            transition: all 0.2s ease-in;
+            opacity: 1.0;
+        }
+
+        /* 跑馬燈樣式 */
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            width: 100%;
+            position: relative;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee 15s linear infinite;
+            color: white;
+            font-size: 14px;
+        }
+
+        .marquee-content:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translate3d(100%, 0, 0);
+            }
+            100% {
+                transform: translate3d(-100%, 0, 0);
+            }
+        }
+
+        /* 不同速度的跑馬燈 */
+        .marquee-slow {
+            animation-duration: 20s;
+        }
+
+        .marquee-fast {
+            animation-duration: 10s;
+        }
+
+        /* 響應式調整 */
+        @media (max-width: 768px) {
+            .marquee-content {
+                font-size: 12px;
+                animation-duration: 12s;
+            }
+        }
+
+        /* 確保跑馬燈文字不會換行 */
+        .skew3, .skew4, .skew5, .skew6 {
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <!--header-->
+    <div class="row pt-3 bg-primary">
+        <div class="col text-center text-white">
+            <p class="bg-info logo-icon pt-3"><i class="fas fa-regular fa-feather fa-4x"></i></p>
+            <h1>英文Logo</h1>
+            <h3>中文名稱</h3>
+            <h5>標語(Slogen)</h5>
+        </div>
+    </div>
+    <!--triangle 1-->
+    <div class="row">
+        <div class="col-6 bg-primary skew1">
+        </div>
+        <div class="col-6 bg-primary skew2">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 bg-primary skew3">
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi beatae cum ducimus excepturi fugit maxime nesciunt, nostrum odio, praesentium quae tenetur ut veritatis voluptatum! 我們提供專業的服務與完整的解決方案。
+                </div>
+            </div>
+        </div>
+        <div class="col-6 bg-primary skew4">
+            <div class="marquee-container">
+                <div class="marquee-content marquee-slow">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio excepturi expedita facere hic illum itaque, labore natus quia quibusdam rem tempora temporibus! 歡迎了解我們的專業團隊與豐富經驗。
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6 bg-info skew5">
+            <div class="marquee-container">
+                <div class="marquee-content marquee-fast">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit maxime nesciunt, nostrum odio, praesentium quae tenetur ut veritatis voluptatum! 創新思維帶來卓越成果。
+                </div>
+            </div>
+        </div>
+        <div class="col-6 bg-info skew6">
+            <div class="marquee-container">
+                <div class="marquee-content">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias animi beatae cum ducimus excepturi fugit maxime nesciunt! 品質保證，客戶滿意是我們的目標。
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!--content-->
+    <div class="row">
+        <div class="col-sm-4 text-center offset-sm-4 border border-start-0 border-end-0">
+            <h2 class="border border-start-0 border-end-0 py-3 my-2 h3">
+                我們提供您解決方案 <br>
+                有效率的提升工作品質 <br>
+                與長遠穩定的獲利 <br>
+            </h2>
+        </div>
+    </div>
+    <!--content2-->
+    <div class="row my-5">
+        <div class="col-6 col-md-4 offset-md-2 text-center service-item">
+            <i class="fas fa-palette fa-5x icon-replace"></i>
+            <img src="https://via.placeholder.com/400x300/6c757d/ffffff?text=平面設計" alt="平面設計" class="img-fluid">
+        </div>
+        <div class="col-4 col-md-4 d-flex align-items-center">
+            <div class="px-2">
+                <h3 class="h4">
+                    平面設計
+                </h3>
+                <p class="small">
+                    美學是個重要的學問，我們對外在的事物存在著主觀的衝擊與印象的深刻。透過傾聽與理解，設計師將為您量身訂做符合您期待的視覺美學。
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--content3-->
+    <div class="row my-5">
+        <div class="col-6 col-md-4 d-flex align-items-center">
+            <div class="px-2">
+                <h3 class="h4">
+                    剪輯與特效
+                </h3>
+                <p class="small">
+                    訊息的傳達由2D平面轉變成多元空間的組合.不只是文字、影像與聲音，我們將透過特效的組合與剪輯的魅力，創作出一部部令人印象深刻的影音之作。
+                </p>
+            </div>
+        </div>
+        <div class="col-6 col-md-4 offset-md-2 text-center service-item">
+            <i class="fas fa-video fa-5x icon-replace"></i>
+            <img src="https://via.placeholder.com/400x300/17a2b8/ffffff?text=剪輯特效" alt="剪輯特效" class="img-fluid">
+        </div>
+    </div>
+    <!--content4-->
+    <div class="row my-5">
+        <div class="col-6 col-md-4 offset-md-2 text-center service-item">
+            <i class="fas fa-code fa-5x icon-replace"></i>
+            <img src="https://via.placeholder.com/400x300/28a745/ffffff?text=網頁設計" alt="網頁設計" class="img-fluid">
+        </div>
+        <div class="col-4 col-md-4 d-flex align-items-center">
+            <div class="px-2">
+                <h3 class="h4">
+                    網頁設計
+                </h3>
+                <p class="small">
+                    透過適合的載體平台，才能有效傳達訊息獲得更多的利益.視覺與前後端的組合，提供的不是廉價的商品，而是符合現今主流且可以真正幫您獲利的網站。
+                </p>
+            </div>
+        </div>
+    </div>
+    <!--content 5-->
+    <div class="row my-5">
+        <div class="col-10 offset-1 col-md-6 offset-md-3 text-center border border-start-0 border-end-0">
+            <h3 class="my-2">取得更多服務</h3>
+            <p class="small my-2">
+                除了視覺的專案服務外，我們也提供教育訓練、活動企劃、專案輔導等項目. 也歡迎大家加入我們這個大家庭。
+            </p>
+            <button class="btn btn-info text-white btn-sm my-2">加入我們</button>
+        </div>
+    </div>
+</div>
+<!--content6-->
+<div class="container-fluid">
+    <div class="row">
+        <div class="col bg-info skew7"></div>
+        <div class="col bg-info skew8"></div>
+    </div>
+    <div class="row">
+        <div class="col bg-primary skew9"></div>
+        <div class="col bg-primary skew10"></div>
+    </div>
+    <div class="row bg-primary">
+        <div class="col-12 col-md-6 offset-md-3 text-white text-center">
+            <h3 class="mb-3 border border-light border-start-0 border-end-0 border-bottom-0">問題與討論</h3>
+            <p class="small">除了專案服務外，我們也提供線上諮詢服務，歡迎您留下訊息。</p>
+        </div>
+        <div class="col-12 text-center">
+            <i class="fab fa-twitter fa-2x text-white mx-2"></i>
+            <i class="fab fa-facebook fa-2x text-white mx-2"></i>
+            <i class="fab fa-instagram fa-2x text-white mx-2"></i>
+            <i class="fab fa-vimeo fa-2x text-white mx-2"></i>
+            <i class="fab fa-youtube fa-2x text-white mx-2"></i>
+        </div>
+        <div class="col-12 bg-primary text-white text-center my-3 pb-5">
+            &copy;Allrights reserved | Design:YOUR LOGO 2025
+        </div>
+    </div>
+</div>
+
+<script>
+// 可選：JavaScript 控制跑馬燈行為
+document.addEventListener('DOMContentLoaded', function() {
+    const marqueeElements = document.querySelectorAll('.marquee-content');
+    
+    // 為每個跑馬燈添加點擊暫停/繼續功能
+    marqueeElements.forEach(function(element) {
+        let isPaused = false;
+        
+        element.addEventListener('click', function() {
+            if (isPaused) {
+                this.style.animationPlayState = 'running';
+                isPaused = false;
+            } else {
+                this.style.animationPlayState = 'paused';
+                isPaused = true;
+            }
+        });
+    });
+    
+    // 響應式速度調整
+    function adjustMarqueeSpeed() {
+        const screenWidth = window.innerWidth;
+        marqueeElements.forEach(function(element) {
+            if (screenWidth < 768) {
+                element.style.animationDuration = '12s';
+            } else if (screenWidth < 1200) {
+                element.style.animationDuration = '15s';
+            }
+        });
+    }
+    
+    // 初始調整和視窗大小變化時調整
+    adjustMarqueeSpeed();
+    window.addEventListener('resize', adjustMarqueeSpeed);
+});
+</script>
+</body>
+</html>

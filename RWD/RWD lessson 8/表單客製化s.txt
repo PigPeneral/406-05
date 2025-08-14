@@ -1,0 +1,15 @@
+表單ID:
+
+姓名寫入的對應欄位代號:
+
+連絡電話寫入的對應欄位代號:
+
+留言事項寫入的對應欄位代號:
+
+
+表單規則
+https://docs.google.com/forms/d/e/表單ID/formResponse?entry.id1=答案1&entry.id2=答案2
+
+
+**欄位代號 請找第二層中括號裡面的數字編號**
+

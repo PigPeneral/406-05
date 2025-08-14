@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>解構(destructuring)</title>
+</head>
+<body>
+	<script>
+		//基本
+		const array = [1,2,3,4,5];
+		const [a,b,c,d,e] = array;
+		console.log(a,b,c,d,e);
+		//跳過
+		const [numone, numtwo,,numfour] = [10,20,30,40,50]
+		console.log(numone,numtwo);
+		console.log(numfour);
+		//交換
+		let x=1,y=2,z=3;
+		[x,y,z]=[z,y,x]
+		console.log(x,y,z);
+		//物件解構
+		const person={
+			name:"<NAME>",
+			age:20,
+			gender:"male"
+		};
+		//更換名稱
+		const {name:user,age:userAge,gender:userGender}=person;
+		console.log(user, userAge, userGender);
+		//函數中解構
+		const greetings = function ({name,age}){
+			console.log(`Hello ${name}, you are ${age} years old`);
+		}
+		const man={name:"<MANSNAME>",age:30}
+		greetings(man)
+	</script>
+</body>
+</html>
+<!-- 
+可用對應形式來解構Objectc或Array
+可用於函式的參數
+較常用在屬性很多的物件上，使用API串接，提取JSON資料時相當方便
+ -->

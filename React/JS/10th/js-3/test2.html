@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="utf-8">
+    <title>Windows物件基本認識-open + close</title>
+    <link rel="stylesheet" href="css/s2.css">
+    <script>
+        const openNew = function () {
+            window.open("text1.html", "new", "width=800,height=900,toolbar=no,scrollbars=no");
+        }
+        const closeNew = function () {
+            window.close();
+        }
+    </script>
+</head>
+
+<body>
+<input type="button" name="button" id="button1" value="開新視窗連結網站" onclick="openNew()">
+<input type="button" name="button" id="button2" value="關閉目前視窗" onclick="closeNew()">
+</body>
+</html>

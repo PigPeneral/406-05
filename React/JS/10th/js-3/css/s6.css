@@ -1,0 +1,41 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+	margin:0;
+	padding:0;
+}
+body{
+/*	background-color: darkgray;*/
+	font-family:"miscrosoft jhengHei";
+	background-image: url(../images/bg3.jpg);
+	background-position: center center;
+	background-size: cover;
+	background-attachment: fixed;
+	text-align: center;
+	padding-top:20%;
+}
+h1{
+	color:drakblue;
+	font-size:28px;
+}
+ul{
+	width:400px;
+	margin:50px auto;
+	background-color:rgba(255,255,255,0.8);
+	text-align:left;
+}
+ul li{
+	color:gray;
+	list-style-type:none;
+	margin:0px 40px;
+}
+#dataArea{
+	color:transparent;
+}
+p{
+	margin:50 0px;
+}
+#content{
+	padding-bottom:5%;
+}

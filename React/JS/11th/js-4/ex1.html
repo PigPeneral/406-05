@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自動刷新頁面</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: purple;
+        }
+
+        p {
+            color: gray;
+            word-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+<h1>color</h1>
+<p>Lorem, ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, deleniti, laudantium numquam, molestias tempora
+    unde blanditiis sit perferendis et pariatur nam molestiae eos, optio corporis rerum fugit temporibus ipsam vel!
+    Reprehenderit, aut aspernatur eos itaque voluptas magni ipsam, officiis, aperiam et nihil cum, ab. Sint beatae quo,
+    pariatur inventore voluptatibus repellendus eveniet nemo soluta nesciunt ipsa! Voluptas vitae ipsam ad doloribus
+    quis neque consequuntur fuga, perspiciatis velit, iure incidunt, ipsa. Aspernatur culpa dolor atque rerum nisi
+    similique inventore, quae, unde, exercitationem voluptate blanditiis saepe, consequatur tempore dolorem maxime
+    debitis aperiam minus. Est pariatur enim quaerat! Saepe porro velit quibusdam sint eaque error id quasi, eum
+    consectetur perferendis sunt quos, est, dolores a doloribus possimus repellendus? Facere aliquid qui sit, architecto
+    quisquam. Non libero alias animi recusandae neque molestias, quaerat fuga rem ex est nobis vero excepturi molestiae
+    tenetur provident id ipsum nisi ad harum pariatur quibusdam autem at blanditiis consectetur atque. Magnam ducimus, a
+    delectus totam fugiat voluptates laboriosam suscipit quia consequatur. Omnis impedit voluptates sed et ullam
+    consequuntur vel harum dolorum ex dignissimos assumenda, provident aperiam facere perspiciatis placeat repellendus
+    obcaecati reprehenderit similique eum blanditiis unde corporis, esse sint. Ad totam eos ex, quae illo commodi
+    aspernatur quis ipsa in quaerat, consequuntur reprehenderit, enim porro, expedita vel! Nesciunt corrupti, ea
+    incidunt voluptatibus tenetur id cumque, quasi non veniam delectus! Dolor nulla non maiores distinctio dicta, nam
+    fuga, porro asperiores eius possimus doloremque veniam, aut aliquam vel perferendis obcaecati deserunt velit magnam
+    laboriosam, mollitia necessitatibus voluptatem magni quidem. Qui deleniti aspernatur, officia sint enim voluptatem
+    magnam fugiat earum nam facere labore distinctio quibusdam ut reiciendis porro quos doloribus! Corrupti perspiciatis
+    nemo numquam nulla rem ab ex repudiandae at dignissimos, ullam magni eligendi, officiis natus itaque eveniet
+    aspernatur eum iure! In tempore quo excepturi hic corrupti placeat corporis, unde, dolore itaque necessitatibus
+    obcaecati iusto commodi perspiciatis distinctio eos delectus consequatur impedit. Porro, odit? Vero, quidem, quas.
+    Maiores quam ducimus in aliquid iste eveniet modi suscipit ipsa. Accusantium pariatur dolores dignissimos error quod
+    cum earum, quas provident ut doloribus magnam, suscipit blanditiis placeat ipsam amet corporis hic officiis laborum
+    repellendus deserunt, exercitationem quo saepe voluptatum. Aspernatur nulla, sapiente modi praesentium debitis eaque
+    deleniti fugiat sit, necessitatibus voluptatum libero saepe adipisci ipsa! Voluptas, assumenda, ut. Aspernatur, hic
+    labore, dolores commodi id, laboriosam dolorem ducimus consectetur vel dicta tempora dignissimos porro vero
+    laudantium nesciunt ea molestiae recusandae ipsam neque perferendis quos. laboriosam unde. Pariatur ducimus
+    provident illo sed cumque quo labore, facilis mollitia vel, enim quidem animi? Odio fuga excepturi voluptatem ullam,
+    nesciunt veritatis, ea dignissimos expedita, minima blanditiis praesentium maxime maiores! Blanditiis rerum
+    accusamus soluta quam alias incidunt commodi aspernatur quae! Cumque dolorum repudiandae magnam possimus quo itaque,
+    veniam inventore reprehenderit, tenetur, quod esse voluptates repellat odit omnis nulla pariatur tempora voluptate.
+    Similique voluptate ratione labore atque, totam odit dolor commodi provident eius dicta minus ipsum ex et minima
+    officiis obcaecati alias perferendis, repellendus. Corporis quo, praesentium nihil iste quod distinctio nulla
+    quisquam consequatur, autem dolor nemo error sunt accusamus cumque quam velit labore blanditiis accusantium
+    laboriosam maiores cum rerum veniam reiciendis deserunt magnam. Laudantium, magnam ex ducimus eaque saepe magni
+    veritatis enim dolorem repellendus quisquam soluta, error sint aliquam ipsam voluptate ad pariatur eius culpa
+    recusandae facere tempora assumenda temporibus ab. Aut cum distinctio delectus praesentium ab eum. Modi vel quos sit
+    id accusantium ipsum eligendi molestiae. Reiciendis, atque. Enim maiores, rem animi molestias vero tenetur earum
+    culpa velit, provident mollitia ipsum nam ipsa omnis officia architecto, aut quibusdam aspernatur. Dolorem provident
+    ad, harum corporis, asperiores vel. Quos nihil aliquam suscipit modi veritatis labore, repellat iste inventore
+    voluptate itaque, animi! Omnis recusandae nulla corrupti ea neque, optio ipsa dolorem explicabo, accusantium
+    numquam? Voluptatibus, pariatur?</p>
+<script>
+    let colorInfo = ["#302569", "#3366cc", "#c369cf"]
+    let k = Math.floor(Math.random() * 3)
+    let newBackgroundImg= ["url(images/b1.jpeg)", "url(images/b2.jpg)",""]
+    //window.document.body.style.backgroundColor = colorInfo[k]//
+    window.document.body.style.backgroundSize = "cover"
+    window.document.body.style.backgroundImage = newBackgroundImg[k]
+    let ct = setTimeout(jump, 2000)
+    function jump () {
+        window.location.reload()
+    }
+</script>
+</body>
+</html>
+<!-- 讓頁面每隔一段時間重新載入  使網頁可以呈現不同背景色彩 -->

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>模板字串(template strings)</title>
+</head>
+<body>
+<script>
+	//基本
+	const name="NumStr"
+	const sayhello="Hello ${name}"
+	console.log(sayhello)
+
+	//表達式
+	const ageA=20
+	const ageB=43
+	console.log(`年齡總計${ageA+ageB}`)
+
+	const year = function (age1, age2) {
+		return age1+age2
+	}
+	const yearDiff = (age1, age2) => Math.abs(age1-age2)
+	console.log(`${year(ageA,ageB)}`)
+	console.log(`${yearDiff(ageA,ageB)}`)
+
+	//多行
+	const html = `
+	<h1>Hello</h1>
+	<p>World</p>
+`
+	const compoOne = () => html
+	console.log(compoOne())
+	document.write(compoOne())
+</script>
+</body>
+</html>
+
+<!-- 
+一般字串使用雙引號框起來，而模板字串使用單引號框起來
+字串與變數串接不需加號，改用${}，直接把變數放在大括號裡面
+換行會忠實呈現，雙引號、單引號可以直接呈現不需使用跳脫字元
+適合變數多的字串，或者用來產生HTML字串
+
+ -->

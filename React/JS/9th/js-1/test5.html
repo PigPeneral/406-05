@@ -1,0 +1,38 @@
+<!doctype html>
+<html  lang="zh-Hant-TW">
+<head>
+	<meta charset="utf-8">
+	<title>Javascript-5-變數基本練習</title>
+	<script>
+		// method 1 //
+		let birthyear=prompt("請輸入出生年(西元)："), age, thisYear=2025;
+		age = thisYear-birthyear
+		console.log("今年"+age+"歲")
+		// method 2//
+		var k=10;
+		function t(){
+			var q=20
+			k=k+q
+			console.log("k:"+k)
+		}
+		t()
+		let s=q-10
+		console.log(s)
+		if (true){
+			s=k-10
+		}
+		//let
+		let q = 20
+		let x = q + 5
+		console.log(x)
+
+		//const
+		const z=30
+		console.log(z)
+	</script>
+</head>
+
+<body>
+	<h1>請設計 輸入西元生日年份 可以出現今年幾歲的訊息視窗</h1>
+</body>
+</html>

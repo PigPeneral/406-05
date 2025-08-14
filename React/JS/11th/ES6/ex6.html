@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EX6</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #84d0fd;
+            font-family: 'Dialog', sans-serif;
+        }
+
+        .cta-primary {
+            --tw-bg-opacity: 1;
+            background-color: rgb(26 115 232/var(--tw-bg-opacity));
+            --tw-text-opacity: 1;
+            color: rgb(255 255 255/var(--tw-text-opacity));
+            transition: background .3s ease, box-shadow .3s ease;
+            border-radius: 100px;
+            font-size: 2rem;
+        }
+
+        .cta-primary:hover {
+            background: #1b66c9;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 1px 3px 1px rgba(60, 64, 67, .15)
+        }
+
+        .cta-primary:focus {
+            background: #1b63c1;
+            box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .3), 0 2px 6px 2px rgba(60, 64, 67, .15)
+        }
+
+        .cta-primary:disabled {
+            --tw-bg-opacity: 1;
+            background-color: rgb(229 231 235/var(--tw-bg-opacity));
+            --tw-text-opacity: 1;
+            color: rgb(75 85 99/var(--tw-text-opacity))
+        }
+
+        #shop {
+            width: 80%;
+            height: 100%;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 2%;
+        }
+
+        .backdrop-blur-custom {
+            backdrop-filter: blur(8px);
+        }
+
+        /* Custom Gradients for each item */
+        .gradient-mobile {
+            background: linear-gradient(to top, #a7d9ff, #e0f2ff);
+        }
+
+        .gradient-laptop {
+            background: linear-gradient(to top, #b2f7b2, #e0ffe0);
+        }
+
+        .gradient-headphone {
+            background: linear-gradient(to top, #d9b2ff, #f2e0ff);
+        }
+
+        .gradient-television {
+            background: linear-gradient(to top, #ffc299, #ffe0cc);
+        }
+
+        .gradient-camera {
+            background: linear-gradient(to top, #ff9999, #ffe0e0);
+        }
+
+        .gradient-tablet {
+            background: linear-gradient(to top, #99e6e6, #e0ffff);
+        }
+
+        .gradient-keyboard {
+            background: linear-gradient(to top, #cccccc, #e6e6e6);
+        }
+
+        .gradient-monitor {
+            background: linear-gradient(to top, #ffff99, #ffffcc);
+        }
+    </style>
+</head>
+<body>
+<div id="button-group" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto my-3">
+    <button id="Over25000" class="cta-primary text-[20px] leading-[100%] mt-auto">Over 25000</button>
+    <button id="Under25000" class="cta-primary text-[20px] leading-[100%] mt-auto">Under 25000</button>
+    <button id="ShowAll" class="cta-primary text-[20px] leading-[100%] mt-auto">Show All</button>
+</div>
+<hr class="mt-7">
+<div id="shop" class="grid grid-cols-2 text-md:grid-cols-4 w-fit m-auto gap-4 md:gap-8 mb-[29.5px]">
+    <p>(空)</p>
+</div>
+<script>
+    const item = [
+        {title: '手機<br>Mobile', img: 'images/p1.png', price: 25000, gradientClass: 'gradient-mobile'},
+        {title: '筆電<br>Laptop', img: 'images/p2.png', price: 21000, gradientClass: 'gradient-laptop'},
+        {title: '耳機<br>Headphone', img: 'images/p3.png', price: 3000, gradientClass: 'gradient-headphone'},
+        {title: '電視<br>Television', img: 'images/p4.png', price: 32000, gradientClass: 'gradient-television'},
+        {title: '相機<br>Camera', img: 'images/p5.png', price: 35000, gradientClass: 'gradient-camera'},
+        {title: '平板<br>Tablet', img: 'images/p6.png', price: 10000, gradientClass: 'gradient-tablet'},
+        {title: '鍵盤<br>Keyboard', img: 'images/p7.png', price: 5000, gradientClass: 'gradient-keyboard'},
+        {title: '螢幕<br>Monitor', img: 'images/p8.png', price: 20000, gradientClass: 'gradient-monitor'},
+    ]
+</script>
+<script>
+    const displayShopItem = (itemList) => {
+        let html = ""
+        itemList.forEach(value => {
+            html += `
+                <div
+                    class="${value.gradientClass} backdrop-blur-custom rounded-lg shadow-md hover:shadow-xl hover:shadow-blue-500/50 transition-all duration-300 ease-in-out overflow-hidden flex flex-col">
+                    <div class="p-4 flex-grow flex flex-col items-center justify-center">
+                        <img src="${value.img}" alt="${value.title}" class="h-32 w-auto object-contain mb-4">
+                        <h3 class="text-lg font-semibold text-center mb-2">${value.title}</h3>
+                        <p class="text-gray-700 text-center">NT$${value.price}</p>
+                    </div>
+                </div>
+`
+        })
+
+        document.getElementById("shop").innerHTML = html;
+    }
+    displayShopItem(item);
+</script>
+<script>
+    const Over25000 = document.getElementById("Over25000");
+    const Under25000 = document.getElementById("Under25000");
+    const ShowAll = document.getElementById("ShowAll");
+    Over25000.addEventListener("click", function () {
+        const filterItem25000up = () => {
+            return item.filter(value => value.price > 25000)
+        }
+        displayShopItem(filterItem25000up());
+    })
+    Under25000.addEventListener("click", function () {
+        const filterItem25000low = () => {
+            return item.filter(value => value.price < 25000)
+        }
+        displayShopItem(filterItem25000low());
+    })
+    ShowAll.addEventListener("click", function () {
+        displayShopItem(item)
+    })
+</script>
+</body>
+</html>

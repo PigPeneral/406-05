@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>如何使用Bootstrap</title>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		testing ("class:'container'")
+		<div class="row">
+			容器裡第一層是(class:"row")
+			<div class="col">
+				row之下是(class:"col")
+			</div>
+		</div>
+	</div>
+	testing!
+<hr>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col">
+						滿版容器(class:"container-fluid")
+						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis tenetur quos asperiores quasi ullam, et sequi accusantium labore incidunt dolorum iste excepturi? Aliquid, vel doloribus ratione veniam molestias, aperiam minus maxime est eligendi? Doloremque nulla rem, sunt omnis voluptate tempore eligendi rerum, corrupti quis ea eaque, ducimus voluptas quisquam inventore!
+			</div>
+		</div>
+	</div>
+<hr>
+	<div class="container">
+		<div class="row"> <!-- row下最多12個col -->
+			<div class="col-3 bg-primary">test.txt</div>
+			<div class="col-6 bg-success">test.txt</div>
+			<div class="col-3 bg-warning">test.txt</div>
+		</div>
+	</div>
+
+</body>
+</html>
+<!-- 
+學習重點:
+如何連結Bootstrap相關檔案?
+*使用檔案連結?自官網下載至本機網站資料夾中
+*使用內容網路連結-CDN?自官網複製連結
+ -->
